@@ -22,12 +22,7 @@ class JSONEncoder(json.JSONEncoder):
             pass
         return json.JSONEncoder.default(self, o)
 
-# endpoint /
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
-
-@app.route('/get', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_item():
     res = []
     for x in coll.find():
@@ -36,7 +31,15 @@ def get_item():
     #jsonify the encoded result
     return jsonify({'items': json.loads(JSONEncoder().encode(res))}), 200
 
-@app.route('/post', methods=['POST'])
+@app.route('/name=<name>', methods=['GET'])
+def get_item_by_name(name):
+    res = []
+    query = {'name' : name}
+    for x in coll.find(query):
+        res.append(x)
+    return jsonify({'items': json.loads(JSONEncoder().encode(res))}), 200
+
+@app.route('/', methods=['POST'])
 def post_item():
     parser = reqparse.RequestParser()
     parser.add_argument('name')
