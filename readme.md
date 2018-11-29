@@ -10,7 +10,7 @@ To run the project via docker, do the following:
 
 1. Install [Docker](https://docs.docker.com/)
 2. Run docker
-3. Pull the image and run it
+3. Pull and run the image
 ```
 docker pull paramithatm/python-api
 docker run --name python-api -p 5000:5000 paramithatm/python-api
@@ -26,6 +26,10 @@ To run the project locally, do the following:
 4. Run using `python3 app.py`
 
 ## ☑ TODO
+
+- [ ] Add .env file containing mongodb url since the IP address allowed to access is limited
+
+## Features
 
 - [X] Get
 - [x] Get with one parameter
