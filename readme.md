@@ -10,7 +10,7 @@ To run the project via docker, do the following:
 
 1. Install [Docker](https://docs.docker.com/)
 2. Run docker
-3. 
+3. Pull the image and run it
 ```
 docker pull paramithatm/python-api
 docker run --name python-api -p 5000:5000 paramithatm/python-api
