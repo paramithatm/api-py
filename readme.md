@@ -22,7 +22,7 @@ docker run --name python-api -p 5000:5000 paramithatm/python-api
 To run the project locally, do the following:
 1. Clone to your local machine `git clone https://github.com/paramithatm/api-py.git`
 2. `cd api-py` to enter the directory
-3. Install the requirements using `pip install -r requirements.txt`
+3. Install the requirements using `pip3 install -r requirements.txt`
 4. Run using `python3 app.py`
 
 ## ☑ TODO
